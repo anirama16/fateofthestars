@@ -1,0 +1,676 @@
+/*==================RESET===================*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: url('./img/background.png') no-repeat center center fixed;
+    background-size: cover;
+    height: 100vh;
+    color: white;
+}
+
+/*==================RESET===================*/
+
+
+
+
+
+
+
+
+/*----------게임스타트----------------------------------*/
+#mainpage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 3em;
+    height: 100vh;
+}
+
+#mainpage button {
+    width: 8em;
+    height: 4em;
+    margin: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-radius: 30px; 
+    border: 0.5px solid #FFDB4D; 
+    color: rgb(208, 208, 208);
+    transition: background-color 0.5s ease;
+    background-color: rgba(141, 141, 159, 0.2); 
+    margin-top: 15em;
+}
+
+#mainpage button:hover {
+    background-color: rgba(141, 141, 159, 0.7); 
+}
+
+#mainpage button:active {
+    background-color: rgba(141, 141, 159, 0.7); 
+}
+
+#mainpage p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 0.7rem;
+    font-weight: 100px;
+    color: rgb(141, 141, 141);
+    margin-top: 10em;
+}
+
+#mainpage img {
+    margin-top: 6em;
+}
+
+/*----------게임스타트----------------------------------*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*----------게임방법----------------------------------*/
+#howtoplay {
+    padding: 3em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    height: 100vh;
+}
+
+.howtoplay-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    margin-bottom: 2em;
+}
+
+.howtoplay-title h3 {
+    font-family: "Playfair Display", serif;
+    font-size: 3em;
+}
+
+.howtoplay-title p {
+    font-family: "Nanum Myeongjo", serif;
+    font-size: 1em;
+    line-height: 1.5;
+    max-width: 50%;
+    letter-spacing: -1px;
+}
+
+
+
+
+
+
+.howtoplay-container {
+    padding: 3em;
+    width: 80%;
+    height: 80%;
+    border: 1px solid #6b6868;
+    border-radius: 1em;
+    background-color: rgba(81, 81, 99, 0.3);
+    backdrop-filter: blur(3px);
+    box-shadow: 0px 0px 15px rgba(255, 219, 77, 0.2);
+    gap: 5em;
+    display: flex;
+
+}
+
+.howtoplay-a {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 10%;
+}
+
+.howtoplay-section {
+    display: flex;
+    margin: 3em;
+    gap: 3em;
+}
+
+.howtoplay-section p {
+    font-size: 1em;
+    color: #d0d0d0;
+}
+
+.howtoplay-a h3 {
+    font-weight: 200px;
+    margin-bottom: 1em;
+    font-size: 1.3em;
+    font-family: "Nanum Myeongjo", serif;
+    letter-spacing: -1px;
+    color: rgb(227, 223, 208);
+}
+
+.howtoplay-text {
+    font-size: 1em;
+    color: #d0d0d0;
+}
+
+#howtoplay .game-start-button{
+    width: 8em;
+    height: 4em;
+    margin: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-radius: 30px; 
+    border: 0.5px solid #FFDB4D; 
+    color: rgb(208, 208, 208);
+    transition: background-color 0.5s ease;
+    background-color: rgba(141, 141, 159, 0.2); 
+}
+
+#howtoplay button:hover {
+    background-color: rgba(141, 141, 159, 0.7); 
+}
+
+#howtoplay button:active {
+    background-color: rgba(141, 141, 159, 0.7); 
+}
+
+.howtoplay-section .judge-buttons {
+    display: flex;
+    gap: 3em;
+}
+
+#howtoplay .game-start-button {
+    width: 14em;
+    height: 7em;
+    font-size: 1em;
+    border-radius: 50px;
+}
+
+/*----------게임방법----------------------------------*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*----------이름을입력하세요----------------------------------*/
+
+#name-input-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 2rem;
+    gap: 1.5rem;
+    height: 100vh;
+    min-height: 100vh;
+    background-color: rgba(0, 0, 0, 0.4); 
+    backdrop-filter: blur(5px); 
+}
+
+#name-input-page label {
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: rgb(208, 208, 208);
+    font-family: "Nanum Myeongjo", serif;
+}
+
+#player-name {
+    width: 60%;
+    max-width: 300px;
+    padding: 0.8rem 1rem;
+    font-size: 1rem;
+    border: 0.5px solid #cdbf8a;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+    outline: none;
+    text-align: center;
+    transition: 0.3s;
+}
+
+#player-name::placeholder {
+    color: #aaaaaa;
+}
+
+#player-name:focus {
+    border-color: #FFD700;
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
+#game-start-button {
+    width: 8em;
+    height: 4em;
+    margin: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-radius: 30px; 
+    border: 0.5px solid #FFDB4D; 
+    color: rgb(208, 208, 208);
+    transition: background-color 0.5s ease;
+    background-color: rgba(141, 141, 159, 0.2); 
+}
+
+#game-start-button:hover {
+    background-color: rgba(141, 141, 159, 0.7); 
+}
+
+#game-start-button:active {
+    background-color: rgba(141, 141, 159, 0.7); 
+}
+
+/*----------이름을입력하세요----------------------------------*/
+
+
+
+
+
+
+#maingame {
+    height: 100vh;
+}
+
+
+
+
+/*----------법관정보, 스코어----------------------------------*/
+
+#game-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 2rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+#judge-info {
+    display: flex;
+    align-items: center; 
+    padding: 1rem;
+    width: 20%;
+    gap: 1rem;
+
+    border: 0.5px solid #6b6868; 
+    color: rgb(208, 208, 208);
+    transition: background-color 0.5s ease;
+    background-color: rgba(81, 81, 99, 0.3); 
+    backdrop-filter: blur(3px);
+}
+
+#judge-info img {
+    width: 3em;
+    height: auto;
+}
+
+.judge-texts {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 0.9rem;
+}
+
+#score-ui {
+    padding: 1rem;
+    width: 20%;
+    border: 0.5px solid #6b6868; 
+    color: rgb(208, 208, 208);
+    transition: background-color 0.5s ease;
+    background-color: rgba(81, 81, 99, 0.3); 
+    backdrop-filter: blur(3px);
+}
+
+
+#score-ui .line {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#score-ui .line div:first-child {
+    text-align: left;
+}
+
+#score-ui .line div:last-child {
+    text-align: right;
+}
+/*----------법관정보, 스코어----------------------------------*/
+
+
+
+
+
+
+
+
+
+
+/*----------행성정보----------------------------------*/
+
+#stage-info {
+    padding: 7em;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; 
+}
+
+#stage-info .stamp {
+    width: 30%;
+}
+
+.planet-container-left {
+    width: 50%;
+    height: 60vh;
+    padding: 3em;
+    margin: 3em;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#planet-image-current,
+#planet-image-next {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    transition: all 0.3s ease;
+    transform: translateY(0);
+    opacity: 1;
+    z-index: 1;
+}
+
+
+
+.stamp-img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 14em;
+    transform: translate(-50%, -50%);
+    display: none;
+    z-index: 10;
+}
+
+
+.planet-wrapper {
+    position: relative;
+    width: 20em;
+    height: 20em;
+}
+
+.planet-container-right {
+    padding: 3rem;
+    margin: 1em;
+    gap: 3em;
+    width: 40%;
+    height: 70vh;
+    border: 1px solid #6b6868; 
+    border-radius: 1em;
+    color: rgb(208, 208, 208);
+    transition: background-color 0.3s ease;
+    background-color: rgba(81, 81, 99, 0.3); 
+    backdrop-filter: blur(3px);
+}
+.planet-name {
+    font-family: "Space Grotesk", sans-serif;
+    color: #FFDB4D; 
+    font-size: 1.5em;
+    margin-bottom: 1em;
+}
+
+.planet-container-right p {
+    font-size: 1.2em;
+}
+
+
+/*----------파괴구제보류버튼--------------*/
+
+#judge-button {
+    display: flex;
+    flex-direction: column;   
+    justify-content: center; 
+    align-items: center;
+    gap: 1em;     
+    margin-top: 25%;      
+}
+
+
+
+.destroy, .save, .keep {
+    font-size: 1em;
+    width: 8em;
+    height: 4em;
+    border: 0.3px solid #FFDB4D; 
+    color: rgb(208, 208, 208);
+    transition: background-color 0.5s ease;
+    background-color: rgba(141, 141, 159, 0.2);
+    font-family: "Nanum Myeongjo", serif; 
+}
+
+
+.destroy:hover {
+    background-color: rgba(35, 47, 98, 0.7); 
+}
+.destroy:active {
+    background-color: rgba(35, 47, 98, 0.7); 
+}
+.keep:hover {
+    background-color: rgba(35, 47, 98, 0.7); 
+}
+.keep:active {
+    background-color: rgba(35, 47, 98, 0.7); 
+}
+.save:hover {
+    background-color: rgba(35, 47, 98, 0.7); 
+}
+.save:active {
+    background-color: rgba(35, 47, 98, 0.7); 
+}
+/*----------파괴구제보류버튼-----------*/
+
+
+
+
+/*----------스테이지엔드---------------------------------*/
+
+#stage-end-result {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    padding: 2rem;
+    gap: 1rem;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.1); 
+    backdrop-filter: blur(5px); 
+}
+#stage-end-result p {
+    font-family:"Playfair Display", serif;
+    font-size: 3em;
+}
+.score-container {
+    padding: 3rem;
+    width: 50%;
+    height: auto;
+    border: 0.3px solid #FFDB4D; 
+    border-radius: 1em;
+    color: rgb(208, 208, 208);
+    transition: background-color 0.5s ease;
+    background-color: rgba(81, 81, 99, 0.3); 
+    backdrop-filter: blur(3px);
+}
+.Sline {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    font-size: 1.2em;
+    gap: 1rem;
+    font-family: "Space Grotesk";
+}
+
+.label {
+    text-align: left;
+}
+
+.value {
+    text-align: right;
+}
+
+
+.go-to-next-stage {
+    width: 10em;
+    height: 4em;
+    padding: 1em;
+    border-radius: 30px; 
+    border: 0.1px solid #a49867; 
+    color: rgb(208, 208, 208);
+    transition: background-color 0.5s ease;
+    background-color: rgba(141, 141, 159, 0.2);
+    font-family: "Nanum Myeongjo", serif; 
+}
+
+.go-to-next-stage:hover {
+    background-color: rgba(35, 47, 98, 0.7); 
+}
+/*----------스테이지엔드---------------------------------*/
+
+
+
+#ending-info {
+    height: 100vh;
+    padding: 3em;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    gap: 1em;
+    height: 100vh;
+}
+
+#ending-title {
+    color: white;
+    font-family: "Playfair Display", serif;
+    font-size: 1.5em;
+    background: #1D1E21;
+    border: 0.1px solid #dfd8be; 
+    box-shadow: 0px 0px 15px  #e4d8ab; 
+    width: 40%;
+    height: auto;
+    padding: 0.3rem;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    border-radius: 15px;
+    gap: 1em;
+    margin: 1em;
+}
+
+#ending-title img {
+    margin: 1rem;
+    width: 2em;
+    height: auto;
+    justify-content: space-between;
+}
+
+.ending-info-box {
+    padding: 3em;
+    width: 80%;
+    height: auto;
+    border: 0.1px solid#9c9a92;  
+    border-radius: 1em;
+    color: rgb(172, 172, 138);
+    transition: background-color 0.5s ease;
+    background-color: rgba(81, 81, 99, 0.3); 
+    backdrop-filter: blur(3px);
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+
+#ending-main-text {
+    color: #FFDB4D; 
+    font-family: "Nanum Myeongjo", serif;
+    font-weight: 400px;
+    font-size: 1.3em;
+    padding: 1rem;
+}
+
+#ending-score-box {
+    background: #1E1F23;
+    padding: 3em;
+    width: 60%;
+    box-shadow: 0px 0px 20px #5e5945; 
+    margin: 0 auto; 
+    color: rgb(245, 245, 245);
+}
+
+.ending-final-text {
+    color: #ffffff; 
+    font-family: "Nanum Myeongjo", serif;
+    font-weight: 400px;
+    padding: 2em;
+    
+}
+
+.startagain-btn {
+    width: 10em;
+    height: 5em;
+    margin: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-radius: 30px; 
+    border: 0.5px solid #FFDB4D; 
+    color: rgb(208, 208, 208);
+    transition: background-color 0.5s ease;
+    background-color: rgba(141, 141, 159, 0.2); 
+}
+
+
+
+#planet-image-current,
+#planet-image-next {
+  transition: transform 0.5s ease, opacity 0.5s ease;
+}
+

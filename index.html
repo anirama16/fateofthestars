@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fate of the Stars</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&family=Noto+Sans+KR:wght@100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js"></script>
+</head>
+<body>
+
+<!------게임스타트----------------------------------->
+    <div id="mainpage">
+        <img src="./img/logo1.png" alt="FOSlogo">
+        <button class="game-start-button" type="button">Game Start</button>
+        <p>© 2025 NAM SeoYeon, Image from NASA (Public Domain) All rights reserved.</p>
+    </div>
+<!------게임스타트----------------------------------->
+
+
+
+
+<!------게임방법----------------------------------->
+
+<div id="howtoplay">
+
+    <div class="howtoplay-title">
+        <p>당신은 우주균형관리국의 신입 법관입니다.<br>
+        행성의 죄를 판단하여 파괴, 유지, 보류 중 하나의 판결을 내려주세요.</p>
+        <h3>How to Play</h3>
+    </div>
+
+    <div class="howtoplay-container">
+        <div class="howtoplay-a">
+            <div class="howtoplay-section">
+                <h3>게임 진행</h3>
+                    <div class="judge-buttons">
+                        <button class="destroy">✧파괴✧</button>
+                        <button class="save">✧구제✧</button>
+                        <button class="keep">✧보류✧</button>
+                    </div>
+                <p class="howtoplay-desc">제공되는 행성 로그를 읽고,<br> 왼쪽 버튼 중 하나를 선택하여 행성의 운명을 결정합니다.</p>
+            </div>
+
+            <div class="howtoplay-section">
+                <h3>법관 등급</h3>
+                <p class="howtoplay-text">
+                    현재 우주는 <strong>생명체 포화 상태</strong>입니다.<br>
+                    상위 법관들은 많은 행성의 소멸을 바라고 있습니다.
+                </p>
+                <p class="howtoplay-text">
+                    많은 행성을 파괴할수록 당신의 실적이 올라갑니다.<br>
+                    쌓은 실적(스코어)을 토대로 법관 등급이 S가 되면 상위 법관으로 승진합니다.
+                </p>
+            </div>
+
+        </div> 
+    </div>
+    <button class="game-start-button" type="button">Game Start</button>
+</div>
+
+<!------게임방법----------------------------------->
+
+
+
+
+
+
+<!------이름을 입력하세요----------------------------------->
+    <!-- <div class="FOSlogo"><img src="/img/logo1.png" alt="FOSlogoSmall"></div> -->
+    <div id="name-input-page">
+        <label for="player-name">이름을 입력하세요.</label>
+        <input type="text" id="player-name" placeholder="이순신"/>
+        <button id="game-start-button" type="button">Game Start</button>
+    </div>
+<!------이름을 입력하세요----------------------------------->
+
+
+
+
+
+
+
+
+
+
+
+<!------본게임---------------------------------->
+<div id="maingame">
+        <!---------------------------공통UI----------------------------------->
+
+        <div id="game-header">
+            <!--법관이름, 심판등급-->
+            <div id="judge-info">
+                <img src="./img/balance1.png" alt="libra">
+                <div class="judge-texts">
+                    <div>Judge: <span id="judge-name">-</span></div>
+                    <div>Judge Rank: <span id="judge-rank">F</span></div>
+                </div>
+            </div>
+
+
+            <!--점수UI-->
+            <div id="score-ui">
+                <div class="line">
+                    <div>Stage</div>
+                    <div><span id="stage-number">1</span></div>
+                </div>
+                <div class="line">
+                    <div>Score</div>
+                    <div><span id="stage-score">0</span></div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+        <div id="stage-info">
+            <div class="planet-container-left">
+            <div class="planet-wrapper">
+                <img id="planet-image-current" src="" alt="current planet img">
+                <img id="planet-image-next" src="" alt="next planet img" style="opacity: 0.5;">
+                <img id="stamp-destroy" class="stamp-img" src="img/stamp_destroy.png" alt="파괴도장">
+                <img id="stamp-save" class="stamp-img" src="img/stamp_save.png" alt="구제도장">
+                <img id="stamp-pause" class="stamp-img" src="img/stamp_pause.png" alt="보류도장">
+            </div>
+            </div>
+               
+                 
+
+            <div class="planet-container-right">
+                <h3 class="planet-name">Planet <span id="planet-name">-</span></h3>
+                <p><strong>문명 수준:<br> </strong> <span id="planet-civil">-</span></p>
+                <p><strong>최근 활동:<br> </strong> <span id="planet-log">-</span></p>
+                <!------파괴구제보류 버튼-------------->
+                <div id="judge-button">
+                    <button class="destroy">✧파괴✧</button>
+                    <button class="save">✧구제✧</button>
+                    <button class="keep">✧보류✧</button>
+                </div>
+                <!------파괴구제보류 버튼-------------->
+            </div>
+        </div>
+
+</div>
+<!------본게임----------------------------------->
+
+
+
+
+
+
+<!------스테이지 종료 이후 점수계산-------------->
+    <div id="stage-end-result">
+        <p>Stage End.</p><br>
+    <div class="score-container">
+        <div class="Sline">
+            <span class="label">Stage Score:</span>
+            <span class="value" id="stage-end-stagescore">100</span>
+        </div>
+
+        <div class="Sline">
+            <span class="label">Total Score:</span>
+            <span class="value" id="stage-end-totalscore">1,000</span>
+        </div>
+
+        <div class="Sline">
+            <span class="label">Judge Rank:</span>
+            <span class="value" id="stage-end-judgerank">-</span>
+        </div>
+    </div><br>
+        <button class="go-to-next-stage">다음 행성계로</button>
+    </div>
+<!------스테이지 종료 이후 점수계산-------------->
+
+
+
+
+
+<!------엔딩분기-------------->
+<div id="ending-info" >
+    <h3 id="ending-title">
+        <img src="./img/balance1.png" alt="libra">
+        Merciless Destroyer
+        <img src="./img/balance1.png" alt="libra">
+    </h3>
+
+    <div class="ending-info-box">
+        <p><strong id="ending-main-text">당신은 무자비한 파괴를 일삼았습니다.</strong></p><br>
+        <p id="ending-description">우주의 생명 과반수 이상을 자비없이 소멸시킨 당신은 상급 판사로 승진했습니다.</p><br>
+        <div id="ending-score-box">
+                    <div class="Sline">
+                        <span class="label">Stage Score:</span>
+                        <span class="value" id="stage-end-stagescore">100</span>
+                    </div>
+
+                    <div class="Sline">
+                        <span class="label">Total Score:</span>
+                        <span class="value" id="stage-end-totalscore">1,000</span>
+                    </div>
+
+                    <div class="Sline">
+                        <span class="label">Judge Rank:</span>
+                        <span class="value" id="stage-end-judgerank">-</span>
+                    </div>
+        </div>
+        <p class="ending-final-text"><br><br>
+            "당신은 얼마나 많은 생명을 파괴했나요? 그리고 왜 그것이 옳다고 믿었나요?"
+        </p>
+        
+    </div>
+
+    <button class="startagain-btn">Start Again</button>
+</div>
+
+<!------엔딩분기-------------->
+
+
+
+
+
+
+
+
+</body>
+</html>
